@@ -36,20 +36,20 @@ static void menu_cb(Fl_Widget *w, void *data)
 
 static struct Fl_Menu_Item items[] = {
     { "File", 0, 0, 0, FL_SUBMENU },
-        { "New",        FL_CTRL + 'n', 0, 0, 0 },
-        { "Open",       FL_CTRL + 'N', 0, 0, 0 },
-        { "Save",       FL_CTRL + 's', 0, 0, 0 },
-        { "Save as   ", FL_CTRL + 'S', 0, 0, FL_MENU_DIVIDER },
-        { "Exit",       0, 0, 0, 0 },
+        { "New",         FL_CTRL + 'n', 0, 0, 0 },
+        { "Open",        FL_CTRL + 'N', 0, 0, 0 },
+        { "Save",        FL_CTRL + 's', 0, 0, 0 },
+        { "Save as\t\t", FL_CTRL + 'S', 0, 0, FL_MENU_DIVIDER },
+        { "Exit",        0, 0, 0, 0 },
         { 0 },
     { "Edit", 0, 0, 0, FL_MENU_INACTIVE | FL_SUBMENU },
         { "Add record", 0, 0, 0, 0 },
         { "Edit record", 0, 0, 0, 0 },
-        { "Remove record", 0, 0, 0, 0 },
+        { "Remove record\t", 0, 0, 0, 0 },
         { 0 },
     { "Help", 0, 0, 0, FL_SUBMENU },
-        { "Help",  FL_CTRL + 'h', 0, 0, FL_MENU_DIVIDER },
-        { "About", FL_CTRL + 'p', 0, 0, 0 },
+        { "Help",      FL_CTRL + 'h', 0, 0, FL_MENU_DIVIDER },
+        { "About\t\t", FL_CTRL + 'p', 0, 0, 0 },
         { 0 },
     { 0 }
 };

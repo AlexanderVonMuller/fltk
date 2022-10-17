@@ -56,7 +56,6 @@ static struct Fl_Menu_Item items[] = {
 
 int main()
 {
-
     int pos_x = get_pos(scr_w, win_w), pos_y = get_pos(scr_h, win_h);
     Fl_Window *win =
         new Fl_Window(pos_x, pos_y, win_w, win_h, "Main window");

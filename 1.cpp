@@ -1,6 +1,8 @@
 #include <FL/Fl.H>
 #include <FL/Fl_Window.H>
 #include <FL/Fl_Box.H>
+#include <FL/Fl_Text_Display.H>
+#include <FL/Fl_Text_Editor.H>
 #include <FL/Fl_Menu_Bar.H>
 #include <FL/Fl_Table.H>
 #include <FL/Fl_Group.H>
@@ -63,10 +65,13 @@ int main()
     Fl_Menu_Bar *menu = new Fl_Menu_Bar(0, 0, win_w, spacing);
     menu->menu(items);
 
-    Fl_Table *table = new Fl_Table(spacing, 2*spacing,
+    Fl_Text_Editor *edit = new Fl_Text_Editor(spacing, 2*spacing,
                 win_w-2*spacing, win_h-3*spacing);
+    Fl_Text_Buffer *buff = new Fl_Text_Buffer;
+    edit->buffer(buff);
+    edit->wrap_mode(Fl_Text_Display::WRAP_AT_COLUMN, 0);
 
-    win->resizable(table);
+    win->resizable(edit);
     win->size_range(win_w, win_h);
     win->end();
     win->show();
